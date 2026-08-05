@@ -27,3 +27,33 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const toggleIcon = navToggle.querySelector('i');
+
+    // Abre o cierra el menú al hacer clic en el botón de hamburguesa
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('nav-visible');
+
+        // Alterna el ícono entre barras y "X"
+        if (navMenu.classList.contains('nav-visible')) {
+            toggleIcon.classList.remove('fa-bars');
+            toggleIcon.classList.add('fa-xmark');
+        } else {
+            toggleIcon.classList.remove('fa-xmark');
+            toggleIcon.classList.add('fa-bars');
+        }
+    });
+
+    // Cierra el menú automáticamente al hacer clic en un enlace de navegación
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('nav-visible');
+            toggleIcon.classList.remove('fa-xmark');
+            toggleIcon.classList.add('fa-bars');
+        });
+    });
+});

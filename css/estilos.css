@@ -652,6 +652,10 @@ proyecto .overlay {
     font-size: 0.9rem;
 }
 
+.nav-toggle {
+    display:none;
+}
+
 /* ==========================================
    MEDIA QUERIES (DISEÑO RESPONSIVE)
    ========================================== */
@@ -664,8 +668,44 @@ proyecto .overlay {
         padding: 15px 20px;
     }
 
+    /* Estilos para el botón hamburguesa */
+    .nav-toggle {
+        display: block;
+        color: #fff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    /* Menú desplegable móvil */
     .header .nav {
-        display: none; /* Oculta el menú horizontal en móviles*/
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto fuera de la pantalla por defecto */
+        width: 70%;
+        height: 100vh;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Clase activa que se añade mediante JS al presiona el botón */
+    .header .nav.nav-visible {
+        right: 0;
+    }
+
+    .header .nav ul {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .header .nav ul li a {
+        font-size: 1.2rem;
     }
 
     /* SECCION INICIO */
