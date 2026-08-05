@@ -70,8 +70,8 @@ body {
 }
 
 .inicio .contenedor-img img {
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
     object-fit: cover;
     box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
     filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.3));
@@ -653,11 +653,6 @@ proyecto .overlay {
         padding: 15px 20px;
     }
 
-    .inicio .contenedor-img img {
-        width: 50%;
-        height: 50%;
-    }
-
     .header .nav {
         display: none; /* Oculta el menú horizontal en móviles*/
     }
@@ -713,11 +708,6 @@ proyecto .overlay {
         font-size: 1.8rem;
     }
 
-    .inicio .contenedor-img img {
-        width: 70%;
-        height: 70%;
-    }
-
     .contenido-seccion h2 {
         font-size: 2rem;
     }
@@ -730,4 +720,4 @@ proyecto .overlay {
         flex-direction: column;
         text-align: center;
     }
-
+}
